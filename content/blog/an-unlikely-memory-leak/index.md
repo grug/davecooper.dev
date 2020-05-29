@@ -1,5 +1,5 @@
 ---
-title: "Unlikely Memory Leak"
+title: 'Unlikely Memory Leak'
 date: 2017-02-05 00:00:00 +0000
 description: Explanation of a memory leak caused by JavaScript's console.log()
 ---
@@ -11,14 +11,14 @@ Picture this: you're writing an MVP for an application which has some data acces
 ```js
 class MyComponent {
   constructor($http) {
-    this.$http = $http
+    this.$http = $http;
   }
 
   doSomething() {
-    this.$http.get("http://myapi.com/some-endpoint").then(response => {
-      console.log(response)
-      this.data = response
-    })
+    this.$http.get('http://myapi.com/some-endpoint').then((response) => {
+      console.log(response);
+      this.data = response;
+    });
   }
 }
 ```

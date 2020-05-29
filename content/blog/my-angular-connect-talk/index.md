@@ -1,5 +1,5 @@
 ---
-title: "My AngularConnect 2019 talk"
+title: 'My AngularConnect 2019 talk'
 date: 2020-01-06 00:00:00 +0000
 description: My AngularConnect 2019 talk
 ---

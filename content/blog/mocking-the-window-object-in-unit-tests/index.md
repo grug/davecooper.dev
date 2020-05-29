@@ -15,11 +15,11 @@ export const measureInitialPageLoad = () => {
   if (
     window.performance
       .getEntries()
-      .filter(el => el.name === "MY_APP_INITIAL_PAGE_RENDERED").length === 0
+      .filter((el) => el.name === 'MY_APP_INITIAL_PAGE_RENDERED').length === 0
   ) {
-    window.performance.measure("MY_APP_INITIAL_PAGE_RENDERED")
+    window.performance.measure('MY_APP_INITIAL_PAGE_RENDERED');
   }
-}
+};
 ```
 
 The code above does the following:
@@ -46,19 +46,19 @@ _Note: tests are written using Jest_
 ### performance.spec.ts
 
 ```typescript
-import { measureInitialPageLoad } from "./performance"
+import { measureInitialPageLoad } from './performance';
 
-describe("performance", () => {
-  it("Calls measure when we have not already measured the initial page rendering", () => {
+describe('performance', () => {
+  it('Calls measure when we have not already measured the initial page rendering', () => {
     window.performance = {
       getEntries: jest.fn().mockReturnValue([]),
       measure: jest.fn(),
-    }
+    };
 
-    measureInitialPageLoad("INITIAL_PAGE_RENDERED_TEST")
-    expect(window.performance.measure).toHaveBeenCalled()
-  })
-})
+    measureInitialPageLoad('INITIAL_PAGE_RENDERED_TEST');
+    expect(window.performance.measure).toHaveBeenCalled();
+  });
+});
 ```
 
 This is something I commonly see to try hack around the window object in unit tests and for _some things_ it does work. However, it turns out the `window.perfomance` object is **read only**. Uh oh - this won't work!
@@ -74,28 +74,28 @@ Admittedly, this was the first thing I tried and left me feeling a bit baffled. 
 ### performance.spec.ts
 
 ```typescript
-import { measureInitialPageLoad } from "./performance"
+import { measureInitialPageLoad } from './performance';
 
-describe("performance", () => {
-  it("Calls measure when we have not already measured the initial page rendering", () => {
-    delete (window as any).performance
+describe('performance', () => {
+  it('Calls measure when we have not already measured the initial page rendering', () => {
+    delete (window as any).performance;
 
     const performance = {
       measure: jest.fn(),
       getEntries: jest.fn(),
-    }
+    };
 
-    Object.defineProperty(window, "performance", {
+    Object.defineProperty(window, 'performance', {
       configurable: true,
       enumerable: true,
       value: performance,
       writable: true,
-    })
+    });
 
-    measureInitialPageLoad("INITIAL_PAGE_RENDERED_TEST")
-    expect(window.performance.measure).toHaveBeenCalled()
-  })
-})
+    measureInitialPageLoad('INITIAL_PAGE_RENDERED_TEST');
+    expect(window.performance.measure).toHaveBeenCalled();
+  });
+});
 ```
 
 Basically, we delete `performance` off the window object... but to do that, we have to cast as `any` because in the Jest testing environment, we're actually referring to the NodeJS `window` which doesn't have `performance` defined on it. We then add a writeable `performance` object to `window` with our Jest mocks and away we go.
@@ -128,7 +128,7 @@ Unfortunately, neither TypeScript nor Jest allow us to do:
 ### window.ts
 
 ```typescript
-export { window }
+export { window };
 ```
 
 So we have to create a copy and export that instead:
@@ -136,9 +136,9 @@ So we have to create a copy and export that instead:
 ### window.ts
 
 ```typescript
-const windowCopy = window
+const windowCopy = window;
 
-export { windowCopy as window }
+export { windowCopy as window };
 ```
 
 Okay, first step done. Next, let's change our references to `window` in our code to use the copy we are now exporting:
@@ -146,17 +146,17 @@ Okay, first step done. Next, let's change our references to `window` in our code
 ### performance.ts
 
 ```typescript
-import { window } from "./window"
+import { window } from './window';
 
 export const measureInitialPageLoad = () => {
   if (
     window.performance
       .getEntries()
-      .filter(el => el.name === "MY_APP_INITIAL_PAGE_RENDERED").length === 0
+      .filter((el) => el.name === 'MY_APP_INITIAL_PAGE_RENDERED').length === 0
   ) {
-    window.performance.measure("MY_APP_INITIAL_PAGE_RENDERED")
+    window.performance.measure('MY_APP_INITIAL_PAGE_RENDERED');
   }
-}
+};
 ```
 
 That was easy - adding the import was the only thing we needed to do!
@@ -166,34 +166,34 @@ Lastly, let's mock the window object in our test (I've also included the other t
 ### performance.spec.ts
 
 ```typescript
-import { measureInitialPageLoad } from "./performance"
+import { measureInitialPageLoad } from './performance';
 
-import { window } from "./window"
+import { window } from './window';
 
-jest.mock("./window", () => ({
+jest.mock('./window', () => ({
   window: {
     performance: {
       measure: jest.fn(),
       getEntries: jest.fn(),
     },
   },
-}))
+}));
 
-describe("performance", () => {
-  it("Calls measure when we have not already measured the initial page rendering", () => {
-    ;(window.performance.getEntries as jest.Mock).mockReturnValue([])
-    measureInitialPageLoad("INITIAL_PAGE_RENDERED_TEST")
-    expect(window.performance.measure).toHaveBeenCalled()
-  })
+describe('performance', () => {
+  it('Calls measure when we have not already measured the initial page rendering', () => {
+    (window.performance.getEntries as jest.Mock).mockReturnValue([]);
+    measureInitialPageLoad('INITIAL_PAGE_RENDERED_TEST');
+    expect(window.performance.measure).toHaveBeenCalled();
+  });
 
-  it("Does not call measure when we already have measured the initial page render", () => {
-    ;(window.performance.getEntries as jest.Mock).mockReturnValue([
-      "INITIAL_PAGE_RENDERED_TEST",
-    ])
-    measureInitialPageLoad("INITIAL_PAGE_RENDERED_TEST")
-    expect(window.performance.measure).not.toHaveBeenCalled()
-  })
-})
+  it('Does not call measure when we already have measured the initial page render', () => {
+    (window.performance.getEntries as jest.Mock).mockReturnValue([
+      'INITIAL_PAGE_RENDERED_TEST',
+    ]);
+    measureInitialPageLoad('INITIAL_PAGE_RENDERED_TEST');
+    expect(window.performance.measure).not.toHaveBeenCalled();
+  });
+});
 ```
 
 And there we have it - a pattern that can be used to mock anything on the window object, regardless if it is read-only or not. The only thing to remember here is that when you want to mock a return value, you still need to cast the function you're mocking to `jest.Mock` as TypeScript isn't quite smart enough to work out that we are actually dealing with a mock at compile-time.

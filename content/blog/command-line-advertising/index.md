@@ -1,6 +1,6 @@
 ---
-title: "Command line advertising: coming to a terminal near you!"
-description: "Command line advertisements: enough said!"
+title: 'Command line advertising: coming to a terminal near you!'
+description: 'Command line advertisements: enough said!'
 date: 2016-11-17 00:00:00 +0000
 ---
 

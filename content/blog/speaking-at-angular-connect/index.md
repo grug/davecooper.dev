@@ -1,5 +1,5 @@
 ---
-title: "Speaking at AngularConnect 2019"
+title: 'Speaking at AngularConnect 2019'
 date: 2019-05-23 00:00:00 +0000
 description: Announcement that I'm speaking at AngularConnect 2019
 ---

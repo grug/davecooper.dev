@@ -1,5 +1,5 @@
 ---
-title: "Injecting mock data into applications in 2019"
+title: 'Injecting mock data into applications in 2019'
 date: 2019-04-30 00:00:00 +0000
 description: Why is injecting mocked data into applications in 2019 so difficult? Let's find out.
 ---
@@ -128,40 +128,40 @@ Let's look at a basic React app that makes a request to an API:
 **App.jsx**
 
 ```jsx
-import React from "react"
-import ReactDOM from "react-dom"
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import { SomeComponent } from "./SomeComponent"
+import { SomeComponent } from './SomeComponent';
 
-ReactDOM.render(<SomeComponent />, document.getElementById("app"))
+ReactDOM.render(<SomeComponent />, document.getElementById('app'));
 ```
 
 **SomeComponent.jsx**
 
 ```jsx
-import React, { Component } from "react"
+import React, { Component } from 'react';
 
 export class SomeComponent extends React.Component {
   state = {
     thing: undefined,
-  }
+  };
 
   componentDidMount() {
-    fetch("www.davesapi.com/get-my-thing").then(thing =>
-      this.setState({ thing })
-    )
+    fetch('www.davesapi.com/get-my-thing').then((thing) =>
+      this.setState({ thing }),
+    );
   }
 
   render() {
     return (
       <>
         <h1>Dave's cool thing</h1>
-        Here's a thing: {!this.state.thing ? "Loading..." : this.state.thing}
-        {!this.state.thing === "badThing" ? null : (
+        Here's a thing: {!this.state.thing ? 'Loading...' : this.state.thing}
+        {!this.state.thing === 'badThing' ? null : (
           <h1>OH NO, THAT IS A BAD THING!</h1>
         )}
       </>
-    )
+    );
   }
 }
 ```
@@ -197,28 +197,28 @@ All we need to do is call the `injectMocks` function exposed by `data-mocks` and
 **App.jsx**
 
 ```jsx
-import React from "react"
-import ReactDOM from "react-dom"
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import { SomeComponent } from "./SomeComponent"
+import { SomeComponent } from './SomeComponent';
 
-import { injectMocks } from "data-mocks"
+import { injectMocks } from 'data-mocks';
 
 const mocks = {
   default: [
     {
       url: /get-my-thing/,
-      method: "GET",
-      response: { thing: "this is a thing" },
+      method: 'GET',
+      response: { thing: 'this is a thing' },
       responseCode: 200,
       delay: 250,
     },
   ],
-}
+};
 
-injectMocks(mocks, "default") // This sets the default scenario
+injectMocks(mocks, 'default'); // This sets the default scenario
 
-ReactDOM.render(<SomeComponent />, document.getElementById("app"))
+ReactDOM.render(<SomeComponent />, document.getElementById('app'));
 ```
 
 Sick - we're good to go. We can now run our app locally and we get the same behaviour as we did when we were connecting to the actual service.
@@ -240,19 +240,19 @@ Let's see what this looks like:
 **App.jsx**
 
 ```jsx
-import React from "react"
-import ReactDOM from "react-dom"
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import { SomeComponent } from "./SomeComponent"
+import { SomeComponent } from './SomeComponent';
 
-import { injectMocks, extractScenarioFromLocation } from "data-mocks"
+import { injectMocks, extractScenarioFromLocation } from 'data-mocks';
 
 const mocks = {
   default: [
     {
       url: /get-my-thing/,
-      method: "GET",
-      response: { thing: "thisIsAThing" },
+      method: 'GET',
+      response: { thing: 'thisIsAThing' },
       responseCode: 200,
       delay: 250,
     },
@@ -260,17 +260,17 @@ const mocks = {
   badThing: [
     {
       url: /get-my-thing/,
-      method: "GET",
-      response: { thing: "badThing" },
+      method: 'GET',
+      response: { thing: 'badThing' },
       responseCode: 200,
       delay: 250,
     },
   ],
-}
+};
 
-injectMocks(mocks, extractScenarioFromLocation(window.location))
+injectMocks(mocks, extractScenarioFromLocation(window.location));
 
-ReactDOM.render(<SomeComponent />, document.getElementById("app"))
+ReactDOM.render(<SomeComponent />, document.getElementById('app'));
 ```
 
 You're probably getting the idea here. However, two things will probably stick out:

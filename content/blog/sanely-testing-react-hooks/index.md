@@ -18,20 +18,20 @@ It might even look like this:
 **useThing.ts**
 
 ```typescript
-import { useSelector, useDispatch } from "react-redux"
-import { useEffect } from "react"
-import { getThingStart } from "./redux/actions"
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { getThingStart } from './redux/actions';
 
 const useThing = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getThingStart())
-  }, [dispatch])
+    dispatch(getThingStart());
+  }, [dispatch]);
 
-  return useSelector(state => state.thing)
-}
+  return useSelector((state) => state.thing);
+};
 
-export { useThing }
+export { useThing };
 ```
 
 We can then use this hook inside a component:
@@ -39,18 +39,18 @@ We can then use this hook inside a component:
 **MyComponent.tsx**
 
 ```tsx
-import React from "react"
-import { useThing } from "./useThing"
+import React from 'react';
+import { useThing } from './useThing';
 
 const MyComponent = () => {
-  const { thing } = useThing()
+  const { thing } = useThing();
 
   if (!thing) {
-    return <div>Loading...</div>
+    return <div>Loading...</div>;
   }
 
-  return <div>This is your thing: {thing}</div>
-}
+  return <div>This is your thing: {thing}</div>;
+};
 ```
 
 We might even have many components that use this hook.
@@ -76,32 +76,32 @@ Let's see what tests for this hook might look like (using Jest):
 **useThing.spec.ts**
 
 ```typescript
-import { renderHook } from "@testing-library/react-hooks"
-import { getThingStart } from "./redux/actions"
-import { useThing } from "./useThing"
+import { renderHook } from '@testing-library/react-hooks';
+import { getThingStart } from './redux/actions';
+import { useThing } from './useThing';
 
-jest.mock("react-redux", () => ({
+jest.mock('react-redux', () => ({
   useSelector: jest.fn(),
   useDispatch: jest.fn(),
-}))
+}));
 
-const mockUseSelector = useSelector as jest.Mock
-const mockUseDispatch = useDispatch as jest.Mock
-const mockDispatch = jest.fn()
+const mockUseSelector = useSelector as jest.Mock;
+const mockUseDispatch = useDispatch as jest.Mock;
+const mockDispatch = jest.fn();
 
-describe("useThing hook", () => {
-  it("calls dispatch and retrieves our thing", () => {
-    mockUseDispatch.mockImplementation(() => mockDispatch)
+describe('useThing hook', () => {
+  it('calls dispatch and retrieves our thing', () => {
+    mockUseDispatch.mockImplementation(() => mockDispatch);
     mockUseSelector.mockImplementation(
-      callback => callback({ thing: "this is our thing" }) // This is our mocked state.
-    )
+      (callback) => callback({ thing: 'this is our thing' }), // This is our mocked state.
+    );
 
-    const { result } = renderHook(() => useThing()) // Call our hook.
+    const { result } = renderHook(() => useThing()); // Call our hook.
 
-    expect(result.current).toBe("this is our thing") // Make sure hook returns our slice of state.
-    expect(mockDispatch).toHaveBeenCalledWith(getThingsStart()) // Make sure the right action was dispatched.
-  })
-})
+    expect(result.current).toBe('this is our thing'); // Make sure hook returns our slice of state.
+    expect(mockDispatch).toHaveBeenCalledWith(getThingsStart()); // Make sure the right action was dispatched.
+  });
+});
 ```
 
 Lovely.
@@ -109,36 +109,36 @@ Lovely.
 To break down what the test is doing...
 
 ```typescript
-jest.mock("react-redux", () => ({
+jest.mock('react-redux', () => ({
   useSelector: jest.fn(),
   useDispatch: jest.fn(),
-}))
+}));
 
-const mockUseSelector = useSelector as jest.Mock
-const mockUseDispatch = useDispatch as jest.Mock
-const mockDispatch = jest.fn()
+const mockUseSelector = useSelector as jest.Mock;
+const mockUseDispatch = useDispatch as jest.Mock;
+const mockDispatch = jest.fn();
 ```
 
 These lines set up our mocked behaviour for `useSelector`, `useDispatch` and `dispatch`. We need to be able to mock implementations for `useSelector` and `useDispatch` and we need to spy on what `dispatch` was called with.
 
 ```typescript
-mockUseDispatch.mockImplementation(() => mockDispatch)
-mockUseSelector.mockImplementation(callback =>
-  callback({ thing: "this is our thing" })
-)
+mockUseDispatch.mockImplementation(() => mockDispatch);
+mockUseSelector.mockImplementation((callback) =>
+  callback({ thing: 'this is our thing' }),
+);
 ```
 
 These lines tell the `useDispatch` hook to return our mocked `dispatch` function and for the `useSelector` hook to call a callback containing a mocked state object.
 
 ```typescript
-const { result } = renderHook(() => useThing())
+const { result } = renderHook(() => useThing());
 ```
 
 This line calls `renderHook` and tells it to run our `useThing` hook. `renderHook` returns a `result` object.
 
 ```typescript
-expect(result.current).toBe("this is our thing")
-expect(mockDispatch).toHaveBeenCalledWith(getThingsStart())
+expect(result.current).toBe('this is our thing');
+expect(mockDispatch).toHaveBeenCalledWith(getThingsStart());
 ```
 
 Finally, we make our assertions! We first assert that the `useThing` hook returned the right value. Next we make sure that `dispatch` was called with the right action to dispatch.

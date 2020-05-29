@@ -1,53 +1,56 @@
 // Gatsby supports TypeScript natively!
-import React from "react"
-import { PageProps, Link, graphql } from "gatsby"
+import React from 'react';
+import { PageProps, Link, graphql } from 'gatsby';
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
-import { formatReadingTime } from "../utils/helpers"
+import Bio from '../components/bio';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import { rhythm } from '../utils/typography';
+import { formatReadingTime } from '../utils/helpers';
 
 type Data = {
   site: {
     siteMetadata: {
-      title: string
-    }
-  }
+      title: string;
+    };
+  };
   allMarkdownRemark: {
     edges: {
       node: {
-        excerpt: string
-        timeToRead: number
+        excerpt: string;
+        timeToRead: number;
         frontmatter: {
-          title: string
-          date: string
-          description: string
-        }
+          title: string;
+          date: string;
+          description: string;
+        };
         fields: {
-          slug: string
-        }
-      }
-    }[]
-  }
-}
+          slug: string;
+        };
+      };
+    }[];
+  };
+};
 
 const BlogIndex = ({ data, location }: PageProps<Data>) => {
-  const siteTitle = data.site.siteMetadata.title
-  const posts = data.allMarkdownRemark.edges
+  const siteTitle = data.site.siteMetadata.title;
+  const posts = data.allMarkdownRemark.edges;
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
       <Bio />
       {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
+        const title = node.frontmatter.title || node.fields.slug;
         return (
           <article key={node.fields.slug}>
             <header>
               <h3
                 style={{
+                  fontSize: rhythm(1),
                   marginBottom: rhythm(1 / 4),
+                  fontFamily: `Montserrat, sans-serif`,
+                  fontWeight: 'normal',
                 }}
               >
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
@@ -67,13 +70,13 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
               />
             </section>
           </article>
-        )
+        );
       })}
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogIndex
+export default BlogIndex;
 
 export const pageQuery = graphql`
   query {
@@ -99,4 +102,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

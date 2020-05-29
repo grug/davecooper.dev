@@ -1,5 +1,5 @@
 ---
-title: "Is moving to TypeScript in 2019 hard?"
+title: 'Is moving to TypeScript in 2019 hard?'
 date: 2019-11-11 00:00:00 +0000
 description: I explore whether moving to TypeScript in 2019 is hard to do
 ---
@@ -153,21 +153,21 @@ All we really need to tell Webpack is a few things:
 In order to do this, we'll need to create a webpack config file (`webpack.config.js`) in the root of our project:
 
 ```js
-const path = require("path")
+const path = require('path');
 
 module.exports = {
-  entry: "./src/components/foo.ts",
+  entry: './src/components/foo.ts',
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
   },
   resolve: {
-    extensions: [".js", ".jsx", ".ts", ".tsx"],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
   module: {
-    rules: [{ test: /\.tsx?$/, exclude: /node_modules/, loader: "ts-loader" }],
+    rules: [{ test: /\.tsx?$/, exclude: /node_modules/, loader: 'ts-loader' }],
   },
-}
+};
 ```
 
 Here we can observe the following things:
