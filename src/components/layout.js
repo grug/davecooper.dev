@@ -4,7 +4,11 @@ import { Link } from 'gatsby';
 import { rhythm } from '../utils/typography';
 import Footer from '../components/footer';
 
-// import { ThemeToggler } from 'gatsby-plugin-dark-mode';
+import { ThemeToggler } from 'gatsby-plugin-dark-mode';
+
+import sun from '../../content/assets/sun.png';
+import moon from '../../content/assets/moon.png';
+import Toggle from './toggle';
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`;
@@ -65,18 +69,34 @@ const Layout = ({ location, title, children }) => {
         minHeight: '100vh',
       }}
     >
-      {/* <ThemeToggler>
+      <ThemeToggler>
         {({ theme, toggleTheme }) => (
-          <label style={{ float: 'right' }}>
-            <input
-              type="checkbox"
-              onChange={(e) => toggleTheme(e.target.checked ? 'dark' : 'light')}
-              checked={theme === 'dark'}
-            />{' '}
-            Dark mode
-          </label>
+          <Toggle
+            icons={{
+              checked: (
+                <img
+                  src={moon}
+                  width="16"
+                  height="16"
+                  alt=""
+                  style={{ pointerEvents: 'none' }}
+                />
+              ),
+              unchecked: (
+                <img
+                  src={sun}
+                  width="16"
+                  height="16"
+                  alt=""
+                  style={{ pointerEvents: 'none' }}
+                />
+              ),
+            }}
+            checked={theme === 'dark'}
+            onChange={(e) => toggleTheme(e.target.checked ? 'dark' : 'light')}
+          />
         )}
-      </ThemeToggler> */}
+      </ThemeToggler>
       <header>{header}</header>
       <main>{children}</main>
       <Footer />
