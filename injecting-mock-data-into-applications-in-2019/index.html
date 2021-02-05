@@ -1,0 +1,310 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Merriweather','Georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Merriweather','Georgia',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:Montserrat,sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;letter-spacing:0.140625em;text-transform:uppercase;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;font-style:italic;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;list-style:disc;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:-1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:1.42188rem;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1.20112rem;line-height:1.75rem;color:inherit;font-style:italic;border-left:0.32813rem solid hsla(0,0%,0%,0.9);border-left-color:inherit;opacity:0.8;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:var(--hr);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.75rem;color:hsla(0,0%,0%,0.9);font-weight:400;}blockquote cite:before{content:"— ";}ul,ol{margin-left:0;}@media only screen and (max-width:480px){ul,ol{margin-left:1.75rem;}blockquote{margin-left:-1.3125rem;margin-right:0;padding-left:0.98438rem;}}h1,h2,h3,h4,h5,h6{margin-top:3.5rem;}a{box-shadow:0 1px 0 0 currentColor;color:var(--textLink);text-decoration:none;}a:hover,a:active{box-shadow:none;}mark,ins{background:#007acc;color:white;padding:0.10938rem 0.21875rem;text-decoration:none;}a.gatsby-resp-image-link{box-shadow:none;}a.anchor{box-shadow:none;}a.anchor svg[aria-hidden="true"]{stroke:var(--textLink);}p code{font-size:1rem;}h1 code, h2 code, h3 code, h4 code, h5 code, h6 code{font-size:inherit;}li code{font-size:1rem;}blockquote.translation{font-size:1em;}</style><style data-href="/styles.9390d2f17e95a9b58c6b.css">@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-191cc9f50f3b76b9617cb383f19acb7d.woff2) format("woff2"),url(/static/montserrat-latin-100-370318464551d5f25b0f0a78f374faac.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-bdeaeb79db315697bd173a55b097dc18.woff2) format("woff2"),url(/static/montserrat-latin-100italic-ecf7d49386e8f265878e735db34a7c4b.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-85d5ef9db7f2dc6979172a4a3b2c57cb.woff2) format("woff2"),url(/static/montserrat-latin-200-1fc98e126a3d152549240e6244d7e669.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-49095760a498d024fe1a85a078850df9.woff2) format("woff2"),url(/static/montserrat-latin-200italic-fe46cf8b9462c820457d3bf537e4057f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-7c3daf12b706645b5d3710f863a4da04.woff2) format("woff2"),url(/static/montserrat-latin-300-8dc95fab9cf98d02ca8d76e97d3dff60.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-f20b178ca2024a5eac8e42e6649db86c.woff2) format("woff2"),url(/static/montserrat-latin-300italic-3fe16939288856e8e828fa2661bf2354.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-bc3aa95dca08f5fee5291e34959c27bc.woff2) format("woff2"),url(/static/montserrat-latin-400-8102c4838f9e3d08dad644290a9cb701.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-5cad650422a7184467af5a4d17b264c4.woff2) format("woff2"),url(/static/montserrat-latin-400italic-d191f22af3bb50902b99ac577f81a322.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-92d16e458625f4d2c8940f6bdca0ff09.woff2) format("woff2"),url(/static/montserrat-latin-500-8b763220218ffc11c57c84ddb80e7b26.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-47bfcca6b69d6a9acca7a8bff17193e2.woff2) format("woff2"),url(/static/montserrat-latin-500italic-72c01f753c3940c0b9cb6bf2389caddf.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-6fb1b5623e528e27c18658fecf5ee0ee.woff2) format("woff2"),url(/static/montserrat-latin-600-7c839d15a6f54e7025ba8c0c4b333e8f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-60789af1c9338ed1a9546722ec54b4f7.woff2) format("woff2"),url(/static/montserrat-latin-600italic-f3d4de8d0afb19e777c79032ce828e3d.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-39d93cf678c740f9f6b2b1cfde34bee3.woff2) format("woff2"),url(/static/montserrat-latin-700-80f10bd382f0df1cd650fec59f3c9394.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-ba136d97b14e82284dd595e257f11c47.woff2) format("woff2"),url(/static/montserrat-latin-700italic-8c98142b425630821139c24bd1698700.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-b7018be9ed6cd94da8b6675b3a468c3b.woff2) format("woff2"),url(/static/montserrat-latin-800-9a9befcf50d64f9d2d19d8b1d1984add.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-540ffdd223d1a9ad3d4e678e1a23372e.woff2) format("woff2"),url(/static/montserrat-latin-800italic-897086f99f4e1f45e6b1e9368527d0bc.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-58cd789700850375b834e8b6776002eb.woff2) format("woff2"),url(/static/montserrat-latin-900-26d42c9428780e545a540bbb50c84bce.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-451157bc8861fe54f523b3669a3def71.woff2) format("woff2"),url(/static/montserrat-latin-900italic-a8ec4957e1c24f5793305763ad9845b3.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-b1158cfcd4aacb9d8fb61625e37af46a.woff2) format("woff2"),url(/static/merriweather-latin-300-cc7de05e166e90320d7d896e0f72a19d.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-8fe52a48089d6ebe46db0b8e7cc66263.woff2) format("woff2"),url(/static/merriweather-latin-300italic-e1331f5397c2a673f9d3765138debdb5.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-8276fdb72ae8f4714d4e6eba704cc39f.woff2) format("woff2"),url(/static/merriweather-latin-400-69f09800f4f6479d06e44eba837df872.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-3a9be9ea9f7aa4af6de7307df21d9fc0.woff2) format("woff2"),url(/static/merriweather-latin-400italic-d76079ed7541a433a54f79316de086e9.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-fa534be7ffa380e39a7f6e03bf9a5e03.woff2) format("woff2"),url(/static/merriweather-latin-700-ba56ea84b8084b7ff9677f50d3cd81bd.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-1ef5edaaa20ae53ea50399884c5e48c6.woff2) format("woff2"),url(/static/merriweather-latin-700italic-534bc9e7ce93c73d73426e46acd78092.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-7528fb70e8a4a82c7305e72ff43ac25f.woff2) format("woff2"),url(/static/merriweather-latin-900-3799b6e2f5ed3fcccf9d7a708d7419fa.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-e1b4d2aaa78e12ad84aaf8a56321e4c2.woff2) format("woff2"),url(/static/merriweather-latin-900italic-2ae22f731b3424e8dbb4b37f7ca6e708.woff) format("woff")}code[class*=language-],pre[class*=language-]{color:#000;background:none;text-shadow:0 1px #fff;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:600;src:url(/static/Montserrat-SemiBold-c641dbee1d75892e4d88bdc31560c91b.ttf) format("ttf");unicode-range:U+00??,U+0131,U+0152-0153,U+02bb-02bc,U+02c6,U+02da,U+02dc,U+2000-206f,U+2074,U+20ac,U+2122,U+2191,U+2193,U+2212,U+2215,U+feff,U+fffd}body{background-color:var(--bg)}body.light{--bg:#fff;--header:grey;--textNormal:#222;--textTitle:#222;--textLink:grey;--hr:rgba(0,0,0,0.2);--inlineCode-bg:rgba(255,229,100,0.2);--inlineCode-text:#1a1a1a}body.dark{-webkit-font-smoothing:antialiased;--bg:#282c35;--header:#fff;--textNormal:hsla(0,0%,100%,0.88);--textTitle:#fff;--textLink:grey;--hr:hsla(0,0%,100%,0.2);--inlineCode-bg:#373c49;--inlineCode-text:#e6e6e6}</style><meta name="generator" content="Gatsby 2.21.37"/><link rel="preconnect dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" title="Dave Cooper&#x27;s Blog RSS Feed" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=8270f3ab466b3f441e1ba5fd84813630"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=8270f3ab466b3f441e1ba5fd84813630"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=8270f3ab466b3f441e1ba5fd84813630"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=8270f3ab466b3f441e1ba5fd84813630"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=8270f3ab466b3f441e1ba5fd84813630"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=8270f3ab466b3f441e1ba5fd84813630"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=8270f3ab466b3f441e1ba5fd84813630"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=8270f3ab466b3f441e1ba5fd84813630"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=8270f3ab466b3f441e1ba5fd84813630"/><title data-react-helmet="true">Injecting mock data into applications in 2019 | davecooper.dev</title><meta data-react-helmet="true" name="description" content="Why is injecting mocked data into applications in 2019 so difficult? Let&#x27;s find out."/><meta data-react-helmet="true" property="og:title" content="Injecting mock data into applications in 2019"/><meta data-react-helmet="true" property="og:description" content="Why is injecting mocked data into applications in 2019 so difficult? Let&#x27;s find out."/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="davewritescodes"/><meta data-react-helmet="true" name="twitter:title" content="Injecting mock data into applications in 2019"/><meta data-react-helmet="true" name="twitter:description" content="Why is injecting mocked data into applications in 2019 so difficult? Let&#x27;s find out."/><link as="script" rel="preload" href="/webpack-runtime-09d3dcc44a7d6c7bbd8f.js"/><link as="script" rel="preload" href="/framework-d54fcf3f0204b459cf2d.js"/><link as="script" rel="preload" href="/app-51faba943505eac6ce17.js"/><link as="script" rel="preload" href="/styles-9b6f388623a2ec93d35f.js"/><link as="script" rel="preload" href="/commons-0478cc9459c4a2f78e84.js"/><link as="script" rel="preload" href="/fab8c9364b01cebfd3503fc18011994750f493ff-2d61f217b95431f99d68.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-a7209f84b6fc34419568.js"/><link as="fetch" rel="preload" href="/page-data\injecting-mock-data-into-applications-in-2019\page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data\app-data.json" crossorigin="anonymous"/></head><body><script>
+void function() {
+  window.__onThemeChange = function() {}
+
+  var preferredTheme
+  try {
+    preferredTheme = localStorage.getItem('theme')
+  } catch (err) { }
+
+  function setTheme(newTheme) {
+    if (preferredTheme && document.body.classList.contains(preferredTheme)) {
+      document.body.classList.replace(preferredTheme, newTheme)
+    } else {
+      document.body.classList.add(newTheme)
+    }
+
+    window.__theme = newTheme
+    preferredTheme = newTheme
+    window.__onThemeChange(newTheme)
+  }
+
+  window.__setPreferredTheme = function(newTheme) {
+    setTheme(newTheme)
+    try {
+      localStorage.setItem('theme', newTheme)
+    } catch (err) {}
+  }
+
+  var darkQuery = window.matchMedia('(prefers-color-scheme: dark)')
+  darkQuery.addListener(function(e) {
+    window.__setPreferredTheme(e.matches ? 'dark' : 'light')
+  })
+
+  setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'))
+}()
+    </script><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div style="margin-left:auto;margin-right:auto;max-width:42rem;padding:2.625rem 1.3125rem;background-color:var(--bg);color:var(--textNormal);min-height:100vh"><header><h3 style="font-family:Montserrat, sans-serif;font-weight:600;margin-top:0"><a style="box-shadow:none;color:inherit" href="/">davecooper.dev</a></h3></header><main><article><header><h1 style="margin-top:1.75rem;margin-bottom:0;font-family:Montserrat, sans-serif;font-weight:600;color:grey">Injecting mock data into applications in 2019</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem">April 30, 2019<!-- --> • ☕️☕️ 10 min read</p></header><section><p>Imagine this timeline… it’s 2019 and injecting mock data into web applications sucks. Keeping application state to be deterministic and flexible is incredibly difficult and cumbersome.</p>
+<p><em>Oh wait</em>, this is the timeline we live in 😱</p>
+<p>Let’s take a look at that in the most shameless abrasive way possible - with me shilling a library I wrote!</p>
+<h2>How do we currently get data into our applications for development?</h2>
+<p>Some of the things that I’m sure we’ve all tried when trying to mash data into our applications:</p>
+<p><strong>Connect the application to production services</strong></p>
+<p><em>No. Just don’t.</em></p>
+<p>If you do this, the developer police will come and take you to developer jail 🚓</p>
+<p>In developer jail, you have to talk about <em>“which IDE is the best”</em> and <em>Tabs vs. Spaces</em> all day, every day. You don’t want that and neither do I.</p>
+<p>This only leads to problems. You’ll accidentally mutate something on one (or all) of your users and everyone will be sad. Plus, you’ll be in jail.</p>
+<p><strong>Connect the application to a UAT/Staging services</strong></p>
+<p><em>No.</em></p>
+<p>If you do this, the developer police will also come and take you to developer jail 🚓</p>
+<p>Inevitably, you’ll end up having many people connecting to these services and user data will be mutated in weird ways that make it difficult to test new features or reprocuce bugs. As with the above scenario, everyone will be sad (and in jail - which will probably make you more sad).</p>
+<p><strong>Connect the application to a local copy of your services</strong></p>
+<p>This is the first approach that won’t land you in developer jail.</p>
+<p>However, it’s a pain to do <em>well</em> - and if you don’t do it well, you’ll go straight to <em>you-know-where</em>.</p>
+<p>You don’t want to have to set your services up manually, so now you’ll probably need to containerise (how do you even spell that word?) things and have ways to reliably reproduce your data stores from scratch and then when things change with your application architecture and implementation etc… you’re probably going to have to do a lot of extra work to keep up with that.</p>
+<blockquote>
+<p>Dave, all of these solutions suck so far. What else can I do?</p>
+</blockquote>
+<p>Yes, yes they do. Let’s continue…</p>
+<p><strong>Run a local mock service to expose data</strong></p>
+<p>Okay, we’re getting somewhere.</p>
+<p>We could write a really simple service (Node/Express servers are easy to set up and is generally familiar to frontend developers) to expose the endpoints and data that our application has. Writing a simple Node service isn’t that hard and it doesn’t put us in a spot where we can be touching actual customer data, nor are we going to be at risk of modifying something that someone else is relying on, since it’s our own personal environment.</p>
+<p>The downside here, though, is that we now have quite a lot of code to write and maintain when all we really care about is the data that comes back in response to our requests. We also still don’t have easy ways of specifically and reliably testing happy/unhappy paths in our applications.</p>
+<hr>
+<blockquote>
+<p>Dave, what about something off-the-shelf?</p>
+</blockquote>
+<p>There are <em>loads and loads and loads and loads and loads and loads (and loads)</em> of solutions available to achieve exactly what we’re talking about (did I mention there are loads of them?). Let’s just look at a couple to see what they’re like.</p>
+<p><em>disclaimer: I don’t want it to sound like I’m trash-talking anything that someone has put time and effort to develop. I’m merely pointing out the underlying problems with data injection that I see in web application development today.</em></p>
+<h2>json-server</h2>
+<p><a href="https://github.com/typicode/json-server">json-server</a> is a simple solution that allows you to specify a JSON file describing the endpoints of your application, and provides a HTTP interface to that. Boom 💥. Zero coding and easy to set up. It also has about a billion Github ⭐️’s so obviously it’s doing a lot of things right.</p>
+<p>Here’s what a sample config looks like (shamelessly lifted from its Github page):</p>
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"posts"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"json-server"</span><span class="token punctuation">,</span> <span class="token property">"author"</span><span class="token operator">:</span> <span class="token string">"typicode"</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">"comments"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token property">"body"</span><span class="token operator">:</span> <span class="token string">"some comment"</span><span class="token punctuation">,</span> <span class="token property">"postId"</span><span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">"profile"</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"typicode"</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>Super easy to write. Super easy to understand. I’ll let you guess what is returned when you make a <code class="language-text">GET</code> to <code class="language-text">/comments</code> (<em>spoiler: you’re correct</em>).</p>
+<p>There are some downsides to this:</p>
+<ul>
+<li>
+<p><em>What if I have a tonne of endpoints in my application?</em></p>
+<ul>
+<li>This file becomes quite large</li>
+</ul>
+</li>
+<li><em>How do I easily test happy/unhappy paths?</em> (i.e. how do I test that my <code class="language-text">POST</code> to <code class="language-text">/login</code> has failed?)</li>
+<li>
+<p><em>How can I simulate delay into individual responses?</em></p>
+<ul>
+<li>There is a <code class="language-text">--delay</code> flag you can pass into the process, but the delay is applied to all responses</li>
+</ul>
+</li>
+<li>Writing lots of JSON is a pain. You get little auto-complete and no typings on anything.</li>
+</ul>
+<h2>apimocker</h2>
+<p>I wanted to give some code examples for <a href="https://github.com/gstroup/apimocker">apimocker</a> but to come up with a self-contained example that demonstrates basic usage is a bit lengthy, so I’ll leave that up to you to check out on its Github page. Essentially, it’s a beefier version of <code class="language-text">json-server</code>.</p>
+<p><code class="language-text">apimocker</code> allows for things like:</p>
+<ul>
+<li>Switch-responses based on URL parameters (this is a term I like to refer to as <code class="language-text">scenarios</code> - remember this for later)</li>
+<li>Splitting of responses into files</li>
+<li>Global response delay, or endpoint-specific response delay</li>
+</ul>
+<p>This is all very cool 😎, except that these config files become very large, very quickly and can be quite hard to read. For example, to configure more advanced switch-responses (<code class="language-text">scenarios</code> - keep remembering this term!) you need to know <code class="language-text">JSON path</code>, which is like <code class="language-text">XPath</code>, only more annoying (okay, that’s subjective).</p>
+<hr>
+<p>These solutions are still a bit heavy and a bit cumbersome, <em>in my opinion</em>. In these cases, we’re spining up a new process and having that constantly run. My dev laptop is a fairly new Macbook, but it still sounds like it’s about to launch into orbit any time I look at it.</p>
+<p>Wouldn’t it just be nice to have some way of not writing these messy, sometimes complicated configs and save on machine resources?</p>
+<p>Hmmm 🤔</p>
+<h2>Enter data-mocks</h2>
+<p>Here’s the part where I shamelessly plug a library I’ve written. I bet you’ve been looking forward to this!</p>
+<p>I co-authored a library called <a href="https://github.com/ovotech/data-mocks">data-mocks</a>. It’s very rad - but of course I’d say that…</p>
+<p>Here’s a brief overview of what it is/does:</p>
+<ul>
+<li>Uses a code driven config to define endpoints we want to mock, and their respective responses</li>
+<li>
+<p>Similar to <a href="https://github.com/nabil-boag/angular-multimocks">angular-multimocks</a>, but <em>framework agnostic</em></p>
+<ul>
+<li>This means it’ll work with plain <code class="language-text">JS</code>, <code class="language-text">Angular</code>, <code class="language-text">React</code>, <code class="language-text">React Native</code> etc…</li>
+<li>This library was actually the inspiration for writing <code class="language-text">data-mocks</code></li>
+</ul>
+</li>
+<li>Compatible with <code class="language-text">XHR</code> and <code class="language-text">Fetch</code></li>
+<li>Light and easy to set up</li>
+<li><code class="language-text">Scenario</code> (he said that term again!) support</li>
+</ul>
+<p>Under the hood, <code class="language-text">data-mocks</code> intercepts HTTP requests your application makes, based on a regex performed against the URL that is being requested. No actual HTTP requests get made as they are picked up by <a href="https://github.com/wheresrhys/fetch-mock">fetch-mock</a> for Fetch requests and <a href="https://github.com/jameslnewell/xhr-mock">xhr-mock</a> for XHR requests. The authors of those two libraries are the real MVPs here and deserve massive amounts of respect 🏆</p>
+<p>Let’s look at a basic React app that makes a request to an API:</p>
+<p><strong>App.jsx</strong></p>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ReactDOM <span class="token keyword">from</span> <span class="token string">'react-dom'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> SomeComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./SomeComponent'</span><span class="token punctuation">;</span>
+
+ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">SomeComponent</span></span> <span class="token punctuation">/></span></span><span class="token punctuation">,</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'app'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p><strong>SomeComponent.jsx</strong></p>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">SomeComponent</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+  state <span class="token operator">=</span> <span class="token punctuation">{</span>
+    thing<span class="token operator">:</span> <span class="token keyword">undefined</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'www.davesapi.com/get-my-thing'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">thing</span><span class="token punctuation">)</span> <span class="token operator">=></span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> thing <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">Dave's cool thing</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">
+        Here's a thing: {!this.state.thing ? 'Loading...' : this.state.thing}
+        </span><span class="token punctuation">{</span><span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>thing <span class="token operator">===</span> <span class="token string">'badThing'</span> <span class="token operator">?</span> <span class="token keyword">null</span> <span class="token operator">:</span> <span class="token punctuation">(</span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">OH NO, THAT IS A BAD THING!</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+        <span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">></span></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>When the component loads, we hit our server and we display our <code class="language-text">thing</code> once it comes back.</p>
+<p>Neato burrito 🌯</p>
+<p>But what if something bad (i.e. <code class="language-text">badThing</code>) comes back from the API? 🤔</p>
+<p>We could:</p>
+<ul>
+<li>
+<p>Hardcode our server to respond with <code class="language-text">badThing</code>? ❌</p>
+<ul>
+<li>That would suck and is way too manual</li>
+</ul>
+</li>
+<li>
+<p>Hardcode the response in our component? ❌</p>
+<ul>
+<li>That would also suck and is also way too manual</li>
+</ul>
+</li>
+<li>Use <code class="language-text">data-mocks</code>? ✅</li>
+</ul>
+<p>Introducing data-mocks into an application is very simple.</p>
+<p>All a mock is, is the following:</p>
+<ul>
+<li>A URL matcher, which is just a regex on the endpoint name</li>
+<li>A HTTP method</li>
+<li>A response object</li>
+<li>A response code</li>
+<li>A delay, in milliseconds</li>
+</ul>
+<p>That’s it. Five things to describe literally any mock. No JSON config. No having to learn a massive API or read a massive readme (although there is one available…).</p>
+<p>All we need to do is call the <code class="language-text">injectMocks</code> function exposed by <code class="language-text">data-mocks</code> and pass in a list of mocks we want to use. Very neat.</p>
+<p><strong>App.jsx</strong></p>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ReactDOM <span class="token keyword">from</span> <span class="token string">'react-dom'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> SomeComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./SomeComponent'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> injectMocks <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'data-mocks'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> mocks <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token keyword">default</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      url<span class="token operator">:</span> <span class="token regex">/get-my-thing/</span><span class="token punctuation">,</span>
+      method<span class="token operator">:</span> <span class="token string">'GET'</span><span class="token punctuation">,</span>
+      response<span class="token operator">:</span> <span class="token punctuation">{</span> thing<span class="token operator">:</span> <span class="token string">'this is a thing'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      responseCode<span class="token operator">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+      delay<span class="token operator">:</span> <span class="token number">250</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token function">injectMocks</span><span class="token punctuation">(</span>mocks<span class="token punctuation">,</span> <span class="token string">'default'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// This sets the default scenario</span>
+
+ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">SomeComponent</span></span> <span class="token punctuation">/></span></span><span class="token punctuation">,</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'app'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p>Sick - we’re good to go. We can now run our app locally and we get the same behaviour as we did when we were connecting to the actual service.</p>
+<p>But I promised you better than that - I promised you an easy way to test other paths of use in the app.</p>
+<h2>Scenarios</h2>
+<p>We can now talk about them! 🕺💃</p>
+<blockquote>
+<p>A scenario is just a mapping of responses that is given a name (i.e. the scenario you are running). The <code class="language-text">default</code> scenario is the default set of behaviour exhibited by endpoints in the application. Any non-default scenario will give you the full set of default mocks, plus all mocks defined in the scenario. If a mock has the same URL matcher in the specified scenario, it will override the response in the corresponding default mock.</p>
+</blockquote>
+<p>In simpler terms:</p>
+<blockquote>
+<p>A scenario is a set of API responses you want your application to give in a given scenario (yes, we’ve used the term to define the term).</p>
+</blockquote>
+<p>Let’s see what this looks like:</p>
+<p><strong>App.jsx</strong></p>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ReactDOM <span class="token keyword">from</span> <span class="token string">'react-dom'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> SomeComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./SomeComponent'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> injectMocks<span class="token punctuation">,</span> extractScenarioFromLocation <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'data-mocks'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> mocks <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token keyword">default</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      url<span class="token operator">:</span> <span class="token regex">/get-my-thing/</span><span class="token punctuation">,</span>
+      method<span class="token operator">:</span> <span class="token string">'GET'</span><span class="token punctuation">,</span>
+      response<span class="token operator">:</span> <span class="token punctuation">{</span> thing<span class="token operator">:</span> <span class="token string">'thisIsAThing'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      responseCode<span class="token operator">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+      delay<span class="token operator">:</span> <span class="token number">250</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  badThing<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      url<span class="token operator">:</span> <span class="token regex">/get-my-thing/</span><span class="token punctuation">,</span>
+      method<span class="token operator">:</span> <span class="token string">'GET'</span><span class="token punctuation">,</span>
+      response<span class="token operator">:</span> <span class="token punctuation">{</span> thing<span class="token operator">:</span> <span class="token string">'badThing'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      responseCode<span class="token operator">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+      delay<span class="token operator">:</span> <span class="token number">250</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token function">injectMocks</span><span class="token punctuation">(</span>mocks<span class="token punctuation">,</span> <span class="token function">extractScenarioFromLocation</span><span class="token punctuation">(</span>window<span class="token punctuation">.</span>location<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">SomeComponent</span></span> <span class="token punctuation">/></span></span><span class="token punctuation">,</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'app'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p>You’re probably getting the idea here. However, two things will probably stick out:</p>
+<ul>
+<li><em>“When I run this, I still get the default scenario respone. What gives?”</em></li>
+<li><em>“What is this <code class="language-text">extractScenarioFromLocation(window.location)</code> business?”</em></li>
+</ul>
+<p>To answer both at once: we need to specify which scenario to run. The way we do this is through the <em>URL of the page we’re on</em>. Go on, add <code class="language-text">?scenario=badThing</code> to your query string (i.e. <code class="language-text">localhost:8080?scenario=badThing</code>). If you have another way that you’d like to pass in the scenario name to the <code class="language-text">injectMocks</code> function, feel free to not use the <code class="language-text">extractScenarioFromLocation</code> util function.</p>
+<p>You’ll now see that we get the unhappy path response from our mocks.</p>
+<p><em>This is especially helpful when running things like Cypress tests - as we don’t need to change anything at all in our code to test different behaviours and make assertions based on what comes back from our APIs!</em></p>
+<h2>Other considerations</h2>
+<p>There are a couple of things to keep in mind with this approach that will make life nice and easy for you:</p>
+<ul>
+<li>
+<p>You can avoid having mocks bundled into your application by surrounding the call to <code class="language-text">injectMocks</code> with a <code class="language-text">if (process.env === &#39;development&#39;) { injectMocks(...); }</code> block.</p>
+<ul>
+<li>Alternatively you can define a separate entry point into your application (i.e. <code class="language-text">App.dev.jsx</code>) and point your dev build to there. This is a bit more work, though.</li>
+</ul>
+</li>
+<li>You can move your mock definitions into their own section of the project (i.e. <code class="language-text">/mocks</code>) to avoid clutter in the entry point of your application</li>
+</ul>
+<h2>Summary of what this allows us to do</h2>
+<p>With all of the above, we can now:</p>
+<ul>
+<li>Easily integrate new mocks into the application</li>
+<li>
+<p>Easily toggle between our new best friend, scenarios</p>
+<ul>
+<li>This allows us to test feature/bug fixes when developing <strong>and</strong> in automated UI tests. This is the killer feature of <code class="language-text">data-mocks</code>, in my opinion. Nothing else seems to offer something as easy (in terms of configuring and using the feature)</li>
+</ul>
+</li>
+<li>Write frontend code without having to have a single line of backend code (or a mock API server) written</li>
+<li>Not have to write <em>yet another</em> JSON config</li>
+</ul>
+<p><em>There you go, now we’re data-mock’ing!</em></p>
+<p>If you’ve got any questions about this or want to contribute, please ping me or open a PR/Github issue 😊</p>
+<p>-Dave</p></section><hr style="margin-bottom:1.75rem"/><footer><div style="display:flex;margin-bottom:4.375rem"><div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:50px;height:50px;margin-right:0.875rem;margin-bottom:0;min-width:50px;border-radius:100%"><img aria-hidden="true" src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAMEBQH/xAAXAQADAQAAAAAAAAAAAAAAAAABAgMA/9oADAMBAAIQAxAAAAHNks8i+cuiuVOU1cEf/8QAGxAAAwACAwAAAAAAAAAAAAAAAQIDABIEEBP/2gAIAQEAAQUCE9FIouWl5UIDYdHHIoEYZSjN1//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BH//EABgRAQEAAwAAAAAAAAAAAAAAAAECABAR/9oACAECAQE/ARE65NUm/wD/xAAiEAABBAECBwAAAAAAAAAAAAABAAIREgMQIiEjMUFRcaH/2gAIAQEABj8Cbts9/wAXNxy30o6jsmZbCKwQqsPE+UGDdVsaCxmNP//EAB8QAAICAQQDAAAAAAAAAAAAAAERACExEEFRcWGB4f/aAAgBAQABPyHYZMBNOoBZt1ovcOQbAy8QEOgbsdSiqMlQHHyYPARhXAfABp//2gAMAwEAAgADAAAAEIDfAP/EABgRAQADAQAAAAAAAAAAAAAAAAEAEBEx/9oACAEDAQE/EMiGw5X/xAAaEQEAAgMBAAAAAAAAAAAAAAABADEQEUFh/9oACAECAQE/EGdvfIRU3G8f/8QAHRABAAICAwEBAAAAAAAAAAAAAQARITFBYXHB0f/aAAgBAQABPxBHgQd0Ncl3nUvBDVfJyAwxq0SvtaiV1wGoKaLnz9l+KKzHOS1k4F+xrNibty/SIUxTNKJkArvG3uLbc//Z" alt="Dave Cooper" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms;border-radius:50%"/><noscript><picture><source srcset="/static/291c4a0ce5457accdb74c1930bbc9a7b/99438/profile-pic.jpg 1x,
+/static/291c4a0ce5457accdb74c1930bbc9a7b/aba1d/profile-pic.jpg 1.5x,
+/static/291c4a0ce5457accdb74c1930bbc9a7b/b315d/profile-pic.jpg 2x" /><img loading="lazy" width="50" height="50" srcset="/static/291c4a0ce5457accdb74c1930bbc9a7b/99438/profile-pic.jpg 1x,
+/static/291c4a0ce5457accdb74c1930bbc9a7b/aba1d/profile-pic.jpg 1.5x,
+/static/291c4a0ce5457accdb74c1930bbc9a7b/b315d/profile-pic.jpg 2x" src="/static/291c4a0ce5457accdb74c1930bbc9a7b/99438/profile-pic.jpg" alt="Dave Cooper" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><p>The (not so witty) ramblings of an Australian developer.<br/>Written by <a href="https://twitter.com/davewritescodes">Dave Cooper</a></p></div></footer></article><nav><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/an-unlikely-memory-leak/">← <!-- -->Unlikely Memory Leak</a></li><li><a rel="next" href="/speaking-at-angular-connect/">Speaking at AngularConnect 2019<!-- --> →</a></li></ul></nav></main><footer style="margin-top:4.375rem;padding-top:1.75rem"><div style="float:right"><a href="/rss.xml" target="_blank" rel="noopener noreferrer">RSS</a></div><a href="https://twitter.com/davewritescodes" target="_blank" rel="noopener noreferrer">Twitter</a> <!-- -->•<!-- --> <a href="https://github.com/grug" target="_blank" rel="noopener noreferrer">GitHub</a> <!-- -->•<!-- --> <a href="https://stackoverflow.com/users/3894430/dave-cooper" target="_blank" rel="noopener noreferrer">Stack Overflow</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-167916113-1', 'auto', {});
+      
+      
+      
+      
+      
+      }</script><script>window.goatcounter={no_onload:true,};</script><script async="" data-goatcounter="https://dave.goatcounter.com/count" src="https://gc.zgo.at/count.js"></script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/injecting-mock-data-into-applications-in-2019/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-51faba943505eac6ce17.js"],"component---src-pages-404-js":["/component---src-pages-404-js-dfe9843d7a3d63af0ba8.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-b7e1d04c3a5ada01c7aa.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-a7209f84b6fc34419568.js"]};/*]]>*/</script><script src="/component---src-templates-blog-post-js-a7209f84b6fc34419568.js" async=""></script><script src="/fab8c9364b01cebfd3503fc18011994750f493ff-2d61f217b95431f99d68.js" async=""></script><script src="/commons-0478cc9459c4a2f78e84.js" async=""></script><script src="/styles-9b6f388623a2ec93d35f.js" async=""></script><script src="/app-51faba943505eac6ce17.js" async=""></script><script src="/framework-d54fcf3f0204b459cf2d.js" async=""></script><script src="/webpack-runtime-09d3dcc44a7d6c7bbd8f.js" async=""></script></body></html>
