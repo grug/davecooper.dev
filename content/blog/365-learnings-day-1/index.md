@@ -1,0 +1,18 @@
+---
+title: '[Day 1] 365 learnings: CSS grid gap property'
+date: 2022-01-01
+description: Summary of the CSS grid 'gap' property
+---
+
+1/365 learnings for the year.
+
+Today I was messing around with a CSS grid layout and found myself having to add `row-gap` and `column-gap` and immediately thought to myself that grid seemingly has a shorthand property for everything and I discovered there is the [gap](https://developer.mozilla.org/en-US/docs/Web/CSS/gap) property!
+
+Basically, you either give it a one or two values and it sets either the `row-gap` and `column-gap` to:
+
+- The same value if you provide a single value (i.e. `40px`)
+- `row-gap` will get the first value and `column-gap` will get the second value if you provide two values (i.e. `40px 2rem`)
+
+Because some of the shorthand properties for CSS grid can be a bit tricky to remember which property is set based on the position of the value in the list, I think I'll probably just use this one for when I want to set both the `row-gap` and `column-gap` to the same value, otherwise I'll explicitly set both if they are different values.
+
+I've created a short [codepen](https://codepen.io/gurgus/pen/BawrZrb) to show this in action.
