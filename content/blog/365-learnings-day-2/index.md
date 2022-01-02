@@ -1,0 +1,62 @@
+---
+title: '[Day 2] 365 learnings: Array.prototype.groupBy'
+date: 2022-01-02
+description: Summary of the upcoming Array.prototype.groupBy function
+---
+
+2/365 learnings for the year.
+
+Today I stumbled across a really handy array function that will hopefully make it into a future release of the JavaScript standard.
+
+I have found myself having to write the same block of code in multiple projects to group items in an array. There's about a million different ways that you can write it, but this is what I go with:
+
+```javascript
+[1, 2, 3, 4, 5].reduce(
+  (acc, cur) => {
+    if (cur % 2 === 0) {
+      acc.even.push(cur);
+    } else {
+      acc.odd.push(cur);
+    }
+
+    return acc;
+  },
+  { odd: [], even: [] },
+);
+
+// { odd: [ 1, 3, 5 ], even: [ 2, 4 ] }
+```
+
+It's a bit imperative and verbose, but I find it more readable than going down the spread syntax route (which is a rarity for me). I also don't want to import the `groupBy` function from [lodash](https://lodash.com/docs/#groupBy) to do this.
+
+I feel should probably just be part of the standard - and it turns out that it almost is! `Array.prototype.groupBy` is currently at [stage 3](https://github.com/tc39/proposal-array-grouping). As an aside - stage 3 basically means "it's been implemented but needs feedback" - you can check out a brief, easily consumable overview of the various TC39 proprosal stages [here](https://exploringjs.com/impatient-js/ch_history.html#tc39-process).
+
+What this means is we can take the above code and rewrite it as follows:
+
+```javascript
+const grouped = [1, 2, 3, 4, 5].groupBy((num) =>
+  num % 2 === 0 ? 'even' : 'odd',
+);
+
+console.log(grouped);
+// { odd: [ 1, 3, 5 ], even: [ 2, 4 ] }
+```
+
+Much nicer!
+
+---
+
+Because this hasn't landed in the standard yet, you can't just begin using this today. However, there is a [shim available](https://github.com/es-shims/Array.prototype.groupBy) so that you can mess around with it. Once you've installed it into your project, you can use the shim with the following code:
+
+```javascript
+const groupBy = require('array.prototype.groupby');
+
+const grouped = groupBy([1, 2, 3, 4, 5], (num) =>
+  num % 2 === 0 ? 'even' : 'odd',
+);
+
+console.log(grouped);
+// { odd: [ 1, 3, 5 ], even: [ 2, 4 ] }
+```
+
+I'm very much looking forward to this hopefully landing in the spec next year!
