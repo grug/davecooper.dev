@@ -2,6 +2,6 @@
 
 My blog site.
 
-Built with Gatsby.
+Built with Gatsby!
 
 Open a PR if you'd like to contribute :)
