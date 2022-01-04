@@ -1,7 +1,7 @@
 ---
 title: '[Day 3] 365 learnings: TypeScript indexed access types'
 date: 2022-01-03
-description:
+description: Let's explore indexed access types!
 ---
 
 3/365 learnings for the year.
