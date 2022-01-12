@@ -1,0 +1,72 @@
+---
+title: '[8] 365 learnings: server-sent events with Node.js'
+date: 2022-01-12
+description: I demo a basic example of how to send server-sent events to a browser
+---
+
+import { Aside } from '../../../src/components/aside';
+
+<Aside>8/365 learnings for the year.</Aside>
+
+<br />
+
+When looking into keeping a web application up to date with some real-time data I am working with, I'd usually reach for something like [GraphQL subscriptions](https://www.apollographql.com/docs/react/data/subscriptions/) or websockets.
+However, I've found that when dealing with a low number of simple messages, opting for [server-sent events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events) may be just as appropriate.
+
+At its core, a server-sent event is where the server is able to push data to the browser without the browser having to request it.
+
+I'd not properly dealt with server-sent events before having to go through this particular work exercise (other than using things that already use server-sent events) so I thought I'd jump in and try to get a feel for how it works.
+
+<Aside>
+  TL;DR{' '}
+  <a href="https://github.com/grug/simple-sse-example">here is the code</a>
+</Aside>
+
+<br />
+
+On the client side, you simply just need to create a new [EventSource](https://developer.mozilla.org/en-US/docs/Web/API/EventSource) which opens a persistent connection to a HTTP server. It uses the `text/event-stream` MIME type.
+
+It looks like this:
+
+```js
+const eventSource = new EventSource('http://<your-server>/');
+```
+
+You can now listen for events on the `eventSource` object:
+
+```js
+eventSource.onmessage = function (event) {
+  console.log(event.data);
+};
+```
+
+On the server side, you just need to provide a response with the `text/event-stream` MIME type and to follow the correct format for [using server-sent events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events).
+
+The below example will send a random number back to the client when a request is made to `/` with the correct `Content-Type` set:
+
+```js
+const http = require('http');
+
+http
+  .createServer(function (request, response) {
+    if (
+      request.headers.accept &&
+      request.headers.accept == 'text/event-stream'
+    ) {
+      response.writeHead(200, {
+        'Content-Type': 'text/event-stream',
+        'Cache-Control': 'no-cache',
+        Connection: 'keep-alive',
+
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers':
+          'Origin, X-Requested-With, Content-Type, Accept',
+      });
+
+      response.write(`data: ${Math.floor(Math.random() * 100 + 1)}\n\n`);
+    }
+  })
+  .listen(5000);
+```
+
+If you were to open your browser window using our example, you'd see a number appear in the console every second. You can also inspect the request further in the browser's dev tools.
